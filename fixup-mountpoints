@@ -1910,6 +1910,44 @@ case "$DEVICE" in
             -e 's block/platform/soc/1da4000.ufshc/by-name/xbl_b sdc1 ' \
             "$@"
         ;;
+    
+    "gta4xlwifi")
+        sed -i \
+            -e 's block/platform/13520000.ufs/by-name/blcmd sda11 '\
+            -e 's block/platform/13520000.ufs/by-name/boot sda12 '\
+            -e 's block/platform/13520000.ufs/by-name/bota sda15 '\
+            -e 's block/platform/13520000.ufs/by-name/cache sda28 '\
+            -e 's block/platform/13520000.ufs/by-name/cp_debug sda15 '\
+            -e 's block/platform/13520000.ufs/by-name/cpefs sdd1 '\
+            -e 's block/platform/13520000.ufs/by-name/dqmdbg sda21 '\
+            -e 's block/platform/13520000.ufs/by-name/dtbo sda10 '\
+            -e 's block/platform/13520000.ufs/by-name/efs sda1 '\
+            -e 's block/platform/13520000.ufs/by-name/keydata sda20 '\
+            -e 's block/platform/13520000.ufs/by-name/keyrefuge sda19 '\
+            -e 's block/platform/13520000.ufs/by-name/keystorage sda6 '\
+            -e 's block/platform/13520000.ufs/by-name/metadata sda24 '\
+            -e 's block/platform/13520000.ufs/by-name/misc sda18 '\
+            -e 's block/platform/13520000.ufs/by-name/nad_fw sda31 '\
+            -e 's block/platform/13520000.ufs/by-name/nad_refer sda16 '\
+            -e 's block/platform/13520000.ufs/by-name/omr sda29 '\
+            -e 's block/platform/13520000.ufs/by-name/optics sda27 '\
+            -e 's block/platform/13520000.ufs/by-name/param sda3 '\
+            -e 's block/platform/13520000.ufs/by-name/persistent sda17 '\
+            -e 's block/platform/13520000.ufs/by-name/prism sda26 '\
+            -e 's block/platform/13520000.ufs/by-name/radio sda14 '\
+            -e 's block/platform/13520000.ufs/by-name/recovery sda13 '\
+            -e 's block/platform/13520000.ufs/by-name/sec_efs sda2 '\
+            -e 's block/platform/13520000.ufs/by-name/spu sda30 '\
+            -e 's block/platform/13520000.ufs/by-name/steady sda7 '\
+            -e 's block/platform/13520000.ufs/by-name/super sda25 '\
+            -e 's block/platform/13520000.ufs/by-name/uh sda8 '\
+            -e 's block/platform/13520000.ufs/by-name/uhcfg sda9 '\
+            -e 's block/platform/13520000.ufs/by-name/up_param sda4 '\
+            -e 's block/platform/13520000.ufs/by-name/userdata sda32 '\
+            -e 's block/platform/13520000.ufs/by-name/vbmeta sda22 '\
+            -e 's block/platform/13520000.ufs/by-name/vbmeta_samsung sda23 '\
+            "$@"
+        ;;
     *)
         cat <<EOF
 
